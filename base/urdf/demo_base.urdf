@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="base">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.435002105803372 0.417526782219682 0.797407624802753"
+        rpy="0 0 0" />
+      <mass
+        value="15.0052389342117" />
+      <inertia
+        ixx="1.05541324320568"
+        ixy="6.37510877421477E-17"
+        ixz="0.000214884937505747"
+        iyy="0.775753170852427"
+        iyz="5.48064198191422E-17"
+        izz="1.66484322418774" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="t1">
+    <inertial>
+      <origin
+        xyz="0 1.11022302462516E-16 -0.00879232822907174"
+        rpy="0 0 0" />
+      <mass
+        value="0.801459555838926" />
+      <inertia
+        ixx="0.0012625171681338"
+        ixy="-2.71050543121376E-20"
+        ixz="4.19451352476334E-22"
+        iyy="0.0012625171681338"
+        iyz="6.97599108464703E-20"
+        izz="0.00223754179292522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base/meshes/t1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base/meshes/t1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w1"
+    type="continuous">
+    <origin
+      xyz="0.815 -0.72589 0"
+      rpy="0 0 0.20142" />
+    <parent
+      link="base_link" />
+    <child
+      link="t1" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="100" velocity="100"/>
+    <joint_properties damping="0.0" friction="0.0"/>
+  </joint>
+  <link
+    name="t2">
+    <inertial>
+      <origin
+        xyz="0 1.1102E-16 0.0375"
+        rpy="0 0 0" />
+      <mass
+        value="0.80146" />
+      <inertia
+        ixx="0.0012625"
+        ixy="0"
+        ixz="2.7701E-20"
+        iyy="0.0012625"
+        iyz="-2.9645E-22"
+        izz="0.0022375" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base/meshes/t2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base/meshes/t2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w2"
+    type="continuous">
+    <origin
+      xyz="0.815 -0.72589 0.80556"
+      rpy="0 0 -0.76321" />
+    <parent
+      link="base_link" />
+    <child
+      link="t2" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="100" velocity="100"/>
+    <joint_properties damping="0.0" friction="0.0"/>
+  </joint>
+  <link
+    name="t3">
+    <inertial>
+      <origin
+        xyz="-1.3878E-17 0 0.0375"
+        rpy="0 0 0" />
+      <mass
+        value="0.80146" />
+      <inertia
+        ixx="0.0012625"
+        ixy="0"
+        ixz="4.2533E-20"
+        iyy="0.0012625"
+        iyz="-4.4863E-21"
+        izz="0.0022375" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base/meshes/t3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base/meshes/t3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w3"
+    type="continuous">
+    <origin
+      xyz="0.055002 -0.75089 0.80849"
+      rpy="0 0 0.2309" />
+    <parent
+      link="base_link" />
+    <child
+      link="t3" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="100" velocity="100"/>
+    <joint_properties damping="0.0" friction="0.0"/>
+  </joint>
+  <link
+    name="t4">
+    <inertial>
+      <origin
+        xyz="0 0 -0.00472969438481665"
+        rpy="0 0 0" />
+      <mass
+        value="0.801459555838926" />
+      <inertia
+        ixx="0.0012625171681338"
+        ixy="2.71050543121376E-20"
+        ixz="3.68026797519126E-20"
+        iyy="0.0012625171681338"
+        iyz="5.94879923673488E-20"
+        izz="0.00223754179292522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base/meshes/t4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base/meshes/t4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w4"
+    type="continuous">
+    <origin
+      xyz="0.055002 -0.75089 0"
+      rpy="0 0 1.8606" />
+    <parent
+      link="base_link" />
+    <child
+      link="t4" />
+    <axis
+      xyz="0 0 1" />
+    <limit effort="100" velocity="100"/>
+    <joint_properties damping="0.0" friction="0.0"/>
+  </joint>
+<plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+ <alwaysOn>true</alwaysOn>
+ <updateRate>20</updateRate>
+ <leftJoint>w4</leftJoint>
+ <rightJoint>w3</rightJoint>
+ <wheelSeparation>0.4</wheelSeparation>
+ <wheelDiameter>0.1</wheelDiameter>
+ <torque>20</torque>
+ <commandTopic>cmd_vel</commandTopic>
+ <odometryTopic>odom</odometryTopic>
+ <odometryFrame>odom</odometryFrame>
+ <robotBaseFrame>base_footprint</robotBaseFrame>
+ </plugin>
+</robot>
